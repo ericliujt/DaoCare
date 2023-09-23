@@ -8,6 +8,7 @@ import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import Logo from '../img/moralis-logo.png'
+import { WorldCoinConnectButton } from "../web3/WorldCoinConnectButton";
 
 
 
