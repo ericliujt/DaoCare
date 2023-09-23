@@ -6339,6 +6339,11 @@ eth-block-tracker@4.4.3:
     pify "^3.0.0"
     safe-event-emitter "^1.0.1"
 
+eth-brownie@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/eth-brownie/-/eth-brownie-0.0.1-security.tgz#fcce283555315a8d0dcd0515b57214860f48cb80"
+  integrity sha512-IaRmk+JWX6Jves2nJ7iH+np+f5VWJbM1Izqiu1z++L9nfxlw5QIihoqooADqzdR6n/sr647se8tGJK6cSR+c5g==
+
 eth-json-rpc-filters@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/eth-json-rpc-filters/-/eth-json-rpc-filters-5.1.0.tgz#f0c2aeaec2a45e2dc6ca1b9843d8e85447821427"

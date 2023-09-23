@@ -9,4 +9,4 @@ networks:
   goerli:
     verify: True
 wallets:
-  from_key: ${PRIVATE_KEY}
+  from_key: ${67e640861802100601f436cd07a736532ae0937f8b83aeb2af844fd7fe21f25f}
