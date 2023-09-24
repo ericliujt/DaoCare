@@ -47,14 +47,14 @@ export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
                         >
                             Dao
                         </Link> */}
-                        <Link
+                        {/* <Link
                             variant="button"
                             color="#1C72C2"
                             href="/login"
                             sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }}
                         >
                             Login with Worldcoin
-                        </Link>
+                        </Link> */}
                     </nav>
 
                     {!isConnected ? <Button href="#" variant="outlined" sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }} onClick={connectToMetamask} >

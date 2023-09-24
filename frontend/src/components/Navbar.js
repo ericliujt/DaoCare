@@ -17,6 +17,9 @@ import { ExecuteProposal } from './ExecuteBox';
 import { useGetTotalVoters } from '../web3/GetVotersCount';
 import { useGetProposals } from '../web3/GetProposalCount';
 import daocare_animation from '../img/daocare_animation.gif';
+import nouns_nft1 from '../img/792_nft.svg';
+import nouns_nft2 from '../img/839_nft.svg';
+import nouns_nft3 from '../img/850_nft.svg';
 
 // import { UnlockProtocol } from './UnlockPayWall.js'
 
@@ -206,6 +209,24 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                             </div>
                         </div>
 
+                    </Typography>
+                    <Typography sx={{ marginTop: 10 , alignItems: 'center',  }} variant="h6" align="center" color="white" component="p">
+                        {/* <div class="row">
+                            <div class="column">
+                                <img src = {nouns_nft1} alt="nouns_nft1" />
+                            </div>
+                            <div class="column">
+                                <img src = {nouns_nft2} alt="nouns_nft2" />
+                            </div>
+                            <div class="column">
+                                <img src = {nouns_nft3} alt="nouns_nft3" />
+                            </div> */}
+                            
+                        <Stack sx={{justifyContent: 'center'}} direction="row" class="images">
+                            <img src = {nouns_nft1} alt="nouns_nft1"/>
+                            <img src = {nouns_nft2} alt="nouns_nft2"/>
+                            <img src = {nouns_nft3} alt="nouns_nft3"/>
+                        </Stack>
                     </Typography>
 
 
