@@ -6,6 +6,7 @@ from brownie import (
     network,
     config,
     Contract,
+    accounts
 )
 from scripts.helpful_scripts import get_account
 
@@ -26,7 +27,7 @@ ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 
 def deploy_contracts():
-    account = get_account()
+    account = accounts.load('testac')
     governance_token = GovernanceToken.deploy(
         2,
         {"from": account},

@@ -14,5 +14,7 @@ networks:
     verify: True
   Apothem-Testnet:
     verify: True
+  xdc-apothem:
+    verify: True
 wallets:
   from_key: ${PRIVATE_KEY}
