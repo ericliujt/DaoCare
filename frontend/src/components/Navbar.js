@@ -70,20 +70,15 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
             <CssBaseline />
             <div className='presentation-container'>
                 <div className='presentation'>
-                    <Typography variant="h5" align="left" color="white" component="p" width="70%">
+                    <Typography sx={{ fontFamily: 'Mooli' }} variant="h5" align="left" color="black" component="p" width="70%">
                         Shape the future of our decentralized community. Join our DAO and have a say in our collective decision-making process. Participate in discussions, propose new ideas, and cast your vote on important issues.
                     </Typography>
-                    <div className='pres-buttons'>
-                        <Button variant='contained' className='pres-btn' onClick={() => { window.open('https://moralis.io/joindiscord/', '_blank'); }}>Join Discord!</Button>
-                        <Button variant='contained' className='pres-btn' onClick={() => { window.open('https://docs.moralis.io/', '_blank'); }}>Read the Docs</Button>
-
-                    </div>
                     <div className='background-img'></div>
                 </div>
                 <div className='cards'>
                     <div className='card'>
                         <p>PROPOSALS</p>
-                        <Typography variant="h6" align="left" color="text.primary" component="p" width="70%">
+                        <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {proposalCount} Total proposals
                         </Typography >
                         <p className='card-text'>PARTICIPATE AND PROPOSE NOW</p>
@@ -91,7 +86,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                     </div>
                     <div className='card'>
                         <p>ELIGIBLE VOTERS</p>
-                        <Typography variant="h6" align="left" color="text.primary" component="p" width="70%">
+                        <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {voters} Total Voters
                         </Typography >
                         <p className='card-text'>JOIN THE DAO NOW AND BECOME ONE</p>
@@ -99,7 +94,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                     </div>
                     <div className='card'>
                         <p>YOUR VOTING POWER</p>
-                        <Typography variant="h6" align="left" color="text.primary" component="p" width="70%">
+                        <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {userBalance ? userBalance : "0"}
                         </Typography >
                         <p className='card-text'>BASED ON YOUR TOKEN BALANCE</p>
@@ -108,33 +103,33 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
             </div>
             <div className='dao'>
                 <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
-                    <Typography variant="h6" align="center" color="white" component="p"
+                    <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="center" color="white" component="p"
                     >
 
                         <div>
                             <Stack spacing={2} direction="row" justifyContent='center'>
 
-                                <Button variant="contained" onClick={() => {
+                                {/* <Button variant="contained" onClick={() => {
                                     setActiveTab(0);
                                     getValue()
-                                }}>Current Value</Button>
+                                }}>Total Assets</Button>
                                 <Button variant="contained" onClick={() => {
                                     setActiveTab(1);
 
-                                }}>Get Funds</Button>
-                                <Button variant="contained" onClick={() => {
+                                }}>Get Funds</Button> */}
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#E81D1D'}} variant="contained" onClick={() => {
                                     setActiveTab(2)
-                                }}>Propose</Button>
-                                <Button variant="contained" onClick={() => {
+                                }}>Propose Activity</Button>
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#FFD72D'}} variant="contained" onClick={() => {
                                     setActiveTab(3)
-                                }}>Vote</Button>
-                                <Button variant="contained" onClick={() => {
+                                }}>Vote for Activity</Button>
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#2BBD6E'}} variant="contained" onClick={() => {
                                     updateParams();
                                     setActiveTab(4)
-                                }}>Execute</Button>
+                                }}>Execute Votes</Button>
 
                             </Stack>
-                            <div>
+                            <div style={{color: 'black'}}>
                                 {activeTab === 0 && (
                                     <div>
                                         <h2>The state of the DAO</h2>
@@ -154,7 +149,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 )}
                                 {activeTab === 2 && (
                                     <div>
-                                        <h2>Propose a new Execution</h2>
+                                        <h2>Propose a new Activity</h2>
                                         <p>The Dao members will vote to decide what happens next</p>
 
                                         <p> Last proposal: {shortId} </p>

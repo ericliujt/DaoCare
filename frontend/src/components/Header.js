@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
-import Logo from '../img/moralis-logo.png'
-import { WorldCoinConnectButton } from "../web3/WorldCoinConnectButton";
+import Logo from '../img/DaoCare-logo.png'
 
 
 
@@ -19,7 +18,7 @@ export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
 
     return (
         <React.Fragment>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+            <GlobalStyles styles={{ fontFamily: 'Mooli', ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
             <CssBaseline />
             <AppBar
                 position="static"
@@ -28,13 +27,13 @@ export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
                 sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
             >
                 <Toolbar sx={{ flexWrap: 'wrap' }}>
-                    <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                        <img src={Logo} alt="Moralis DAO" />
+                    <Typography variant="h6" color="inherit" noWrap sx={{ fontFamily: 'Mooli', flexGrow: 1, marginTop: 1 }}>
+                        <img src={Logo} alt="DaoCare" width="70" height="70" />
                     </Typography>
                     <nav>
-                        <Link
+                        {/* <Link
                             variant="button"
-                            color="text.primary"
+                            color="#1C72C2"
                             href="#"
                             sx={{ my: 1, mx: 1.5 }}
                         >
@@ -42,23 +41,23 @@ export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
                         </Link>
                         <Link
                             variant="button"
-                            color="text.primary"
+                            color="#1C72C2"
                             href="#"
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             Dao
-                        </Link>
+                        </Link> */}
                         <Link
                             variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5 }}
+                            color="#1C72C2"
+                            href="/login"
+                            sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }}
                         >
-                            Blog
+                            Login with Worldcoin
                         </Link>
                     </nav>
 
-                    {!isConnected ? <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }} onClick={connectToMetamask} >
+                    {!isConnected ? <Button href="#" variant="outlined" sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }} onClick={connectToMetamask} >
                         Connect Wallet
                     </Button> : <Button variant='outlined' disabled>Connected</Button>}
 

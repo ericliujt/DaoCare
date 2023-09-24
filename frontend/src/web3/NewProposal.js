@@ -49,7 +49,7 @@ export function useCreateProposal() {
 
 
         } catch (err) {
-            console.log(err)
+            console.log({err})
         }
 
     }

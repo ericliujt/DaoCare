@@ -57,13 +57,13 @@ export const VoteProposal = ({ lastId, signer }) => {
 
     return (<>
         <CardContent >
-            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            <Typography sx={{ fontFamily: 'Mooli', fontSize: 14 }} color="text.secondary" gutterBottom>
                 Current/Latest Voting
             </Typography>
-            <Typography variant="h5" component="div">
+            <Typography sx={{ fontFamily: 'Mooli'}} variant="h5" component="div">
                 {shortId}
             </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            <Typography sx={{  fontFamily: 'Mooli', mb: 1.5 }} color="text.secondary">
                 The Proposal state is {handleVotingState(proposalState)}
             </Typography>
 
@@ -71,13 +71,13 @@ export const VoteProposal = ({ lastId, signer }) => {
         {handleVotingState(proposalState) === "Active" ? <div>
             <TextField id="outlined-basic" label="reason" variant="outlined" sx={{ width: "100%" }} name="reason" onChange={handleVoteReason} defaultValue='' />
             <CardActions sx={{ justifyContent: "space-between", display: "flex" }}>
-                <Button size="small" variant='outlined' onClick={() => {
+                <Button sx={{fontFamily: 'Mooli'}} size="small" variant='outlined' onClick={() => {
                     voteInProposal(signer, lastId, 1, voteReason);
                 }}>In Favor</Button>
-                <Button size="small" variant='outlined' onClick={() => {
+                <Button sx={{fontFamily: 'Mooli'}} size="small" variant='outlined' onClick={() => {
                     voteInProposal(signer, lastId, 0, voteReason);
                 }}>Against</Button>
-                <Button size="small" variant='outlined' onClick={() => {
+                <Button sx={{fontFamily: 'Mooli'}} size="small" variant='outlined' onClick={() => {
                     voteInProposal(signer, lastId, 2, voteReason);
                 }}>Abstain</Button>
             </CardActions>

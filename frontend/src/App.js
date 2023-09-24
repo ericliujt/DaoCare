@@ -27,7 +27,7 @@ function App() {
     <>
       <Header connectToMetamask={connectToMetamask} isConnected={isConnected} account={account} signer={signer} />
       <Navbar boxValue={boxValue} getValue={getValue} userBalance={userBalance} getBalance={getBalance} signer={signer} requestFunds={requestFunds} createProposal={createProposal} proposal={proposal} newValue={newValue} proposalDescription={proposalDescription} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

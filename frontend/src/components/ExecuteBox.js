@@ -47,26 +47,26 @@ export const ExecuteProposal = ({ lastId, signer, value, description }) => {
 
     return (<>
         <CardContent>
-            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            <Typography sx={{ fontFamily: 'Mooli', fontSize: 14 }} color="text.secondary" gutterBottom>
                 Current/Latest Voting
             </Typography>
-            <Typography variant="h5" component="div">
+            <Typography sx={{ fontFamily: 'Mooli'}} variant="h5" component="div">
                 {shortId}
             </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            <Typography sx={{ fontFamily: 'Mooli', mb: 1.5 }} color="text.secondary">
                 The Proposal state is {handleVotingState(proposalState)}
             </Typography>
 
         </CardContent>
         {handleVotingState(proposalState) === "Succeeded" ? <div>
             <CardActions sx={{ justifyContent: "center", display: "flex" }}>
-                <Button size="small" variant='outlined' onClick={() => {
+                <Button sx={{ fontFamily: 'Mooli' }} size="small" variant='outlined' onClick={() => {
                     queueProposal(signer, value, description);
                 }}>Queue</Button>
             </CardActions>
         </div> : handleVotingState(proposalState) === "Queued" ? <div>
             <CardActions sx={{ justifyContent: "center", display: "flex" }}>
-                <Button size="small" variant='outlined' onClick={() => {
+                <Button sx={{ fontFamily: 'Mooli' }} size="small" variant='outlined' onClick={() => {
                     executeProposal(signer, value, description);
                 }}>Execute</Button>
             </CardActions>

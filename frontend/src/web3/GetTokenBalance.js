@@ -12,7 +12,7 @@ export function useGetBalance() {
             const balanceInMRST = ethers.utils.formatUnits(balance, decimals);
             setUserBalance(balanceInMRST)
 
-        }).catch((err) => console.log(err))
+        }).catch((err) => console.log({err}))
     }
 
     return { userBalance, getBalance }

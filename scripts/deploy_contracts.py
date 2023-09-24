@@ -14,12 +14,12 @@ from web3 import Web3
 initial_supply = Web3.toWei(100, "ether")
 
 
-QUORUM_PERCENTAGE = 5  # %
-VOTING_PERIOD = 100  # 10 minutes
-VOTING_DELAY = 2  # 1 block
+QUORUM_PERCENTAGE = 2  # %
+VOTING_PERIOD = 5  # 10 minutes
+VOTING_DELAY = 1  # 1 block
 
 # TimeLock
-MIN_DELAY = 5  # Seconds
+MIN_DELAY = 2  # Seconds
 
 # Address 0
 ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"

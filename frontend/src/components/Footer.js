@@ -5,10 +5,10 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 function Copyright(props) {
     return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
+        <Typography sx={{ fontFamily: 'Mooli' }} variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright - MIT License - '}
-            <Link color="inherit" href="https://moralis.io/">
-                Moralis.io
+            <Link sx={{fontFamily: 'Mooli'}} color="inherit" href="https://daocare.xyz">
+                daocare.xyz
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -59,13 +59,13 @@ export const Footer = () => {
             <Grid container spacing={4} justifyContent="space-evenly">
                 {footers.map((footer) => (
                     <Grid item xs={6} sm={3} key={footer.title}>
-                        <Typography variant="h6" color="text.primary" gutterBottom>
+                        <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" color="text.primary" gutterBottom>
                             {footer.title}
                         </Typography>
                         <ul>
                             {footer.description.map((item) => (
                                 <li key={item}>
-                                    <Link href="#" variant="subtitle1" color="text.secondary">
+                                    <Link sx={{fontFamily: 'Mooli'}} href="#" variant="subtitle1" color="text.secondary">
                                         {item}
                                     </Link>
                                 </li>

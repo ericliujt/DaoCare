@@ -1,14 +1,20 @@
+#root{
+  font-family: 'Mooli' !important;
+}
+
 .presentation-container{
   padding: 5vh 20vw;
+  font-family: 'Mooli' !important;
 }
 
 .presentation{
+  font-family: 'Mooli' !important;
   width: 100%;
   padding: 30px;
-  border-radius: 10px;
-  background: linear-gradient(180deg,#03a8fa 0,#17e8dc 100%);
+  /* border-radius: 10px; */
+  /* background: #03a8fa; */
 
-  color:white;
+  color:black;
   position: relative;
 
 }
@@ -43,7 +49,7 @@
   width: calc((100% / 3) - 25px/3 );
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.25);
+  /* box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.25); */
   border: 1px solid #dcdcdc;
 }
 
@@ -80,9 +86,15 @@
 }
 
 .dao{
+  font-family: 'Mooli' !important;
   width: 100%;
   padding: 30px;
-  border-radius: 150px 150px 0px 0px;
-  background: linear-gradient(180deg,#03a8fa 0,#17e8dc 100%);
-  color:white;
+  /* border-radius: 150px 150px 0px 0px; */
+  /* background: linear-gradient(180deg,#03a8fa 0,#17e8dc 100%); */
+  /* background: #03a8fa; */
+  color:black;
+}
+
+.rounded{
+  border-radius: 16px;
 }

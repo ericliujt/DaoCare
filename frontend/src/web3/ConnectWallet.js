@@ -6,20 +6,26 @@ export function useMetamaskState() {
     const [account, setAccount] = useState();
     const [signer, setSigner] = useState();
 
+    ///ADDED:\
+    const [address, setAddress] = useState("");
+
     async function connectToMetamask() {
         try {
 
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const acc = await provider.send('eth_requestAccounts', []);
             const sign = provider.getSigner(acc[0]);
+            console.log({provider, acc, sign});
             setIsConnected(true);
             setAccount(acc[0]);
             setSigner(sign);
+
+            setAddress(acc[0]);
 
         } catch (err) {
             console.log(err)
         }
     }
 
-    return { isConnected, account, signer, connectToMetamask }
+    return { isConnected, account, signer, connectToMetamask, address }
 }

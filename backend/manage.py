@@ -2,6 +2,9 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import json
+from urllib.parse import quote_plus, urlencode
+from authlib.integrations.django_client import OAuth
 
 
 def main():

@@ -18,6 +18,10 @@ from django.urls import path
 from tokens import views
 
 urlpatterns = [
+    path("", views.index, name="index"),
+    path("login/", views.login, name="login"),
+    path("logout/", views.logout, name="logout"),
+    path("callback/", views.callback, name="callback"),
     path("admin/", admin.site.urls),
     path("get_balance/", views.get_balance, name="get_balance"),
     path("request_challenge/", views.request_challenge, name="request_challenge"),
