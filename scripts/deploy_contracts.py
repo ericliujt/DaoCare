@@ -27,7 +27,7 @@ ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 
 def deploy_contracts():
-    account = accounts.load('testac')
+    account = get_account()
     governance_token = GovernanceToken.deploy(
         2,
         {"from": account},

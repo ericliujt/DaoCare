@@ -9,7 +9,10 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import Logo from '../img/DaoCare-logo.png'
 
-
+const redirectToExternalSite = () => {
+    // Replace 'https://example.com' with the URL of the external website you want to link to
+    window.location.href = 'https://app.unlock-protocol.com/checkout?id=2cba6906-dafd-4fca-a169-8c4c20576dba';
+  };
 
 
 export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
@@ -56,6 +59,10 @@ export const Header = ({ isConnected, account, signer, connectToMetamask }) => {
                             Login with Worldcoin
                         </Link> */}
                     </nav>
+
+                    <Button href="#" variant="outlined" sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }} onClick={redirectToExternalSite} >
+                        Unlock Membership
+                    </Button>
 
                     {!isConnected ? <Button href="#" variant="outlined" sx={{ fontFamily: 'Mooli', my: 1, mx: 1.5 }} onClick={connectToMetamask} >
                         Connect Wallet

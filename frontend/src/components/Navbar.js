@@ -157,7 +157,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 {activeTab === 2 && (
                                     <div>
                                         <h2>Propose a new Activity</h2>
-                                        <p>The Dao members will vote to decide what happens next</p>
+                                        <p>The DAO members will vote to decide what happens next</p>
 
                                         <p> Last proposal: {shortId} </p>
 
@@ -199,7 +199,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 {activeTab === 4 && (
                                     <div>
                                         <h2>Queue & Execute</h2>
-                                        <p>Vote Period has Finished, time to execute!</p>
+                                        <p>Vote period has finished, time to execute!</p>
                                         <Box sx={{ minWidth: 275 }}>
                                             <Card variant="outlined"><ExecuteProposal signer={signer} lastId={proposal} value={propValue} description={propDesc} /></Card>
                                         </Box>

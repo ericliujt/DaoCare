@@ -54,7 +54,7 @@ export const ExecuteProposal = ({ lastId, signer, value, description }) => {
                 {shortId}
             </Typography>
             <Typography sx={{ fontFamily: 'Mooli', mb: 1.5 }} color="text.secondary">
-                The Proposal state is {handleVotingState(proposalState)}
+                The proposal state is {handleVotingState(proposalState)}
             </Typography>
 
         </CardContent>
@@ -70,7 +70,7 @@ export const ExecuteProposal = ({ lastId, signer, value, description }) => {
                     executeProposal(signer, value, description);
                 }}>Execute</Button>
             </CardActions>
-        </div> : handleVotingState(proposalState) === "Active" ? <div> Voting Process Still active </div> : handleVotingState(proposalState) === "Defeated" ? <div> The Proposal has failed wait until a new one</div> : <div> You cant' execute now!</div>
+        </div> : handleVotingState(proposalState) === "Active" ? <div> Voting Process Still active </div> : handleVotingState(proposalState) === "Defeated" ? <div> The proposal has failed, wait until a new one</div> : <div> You need more votes to execute.</div>
         }
     </>)
 }

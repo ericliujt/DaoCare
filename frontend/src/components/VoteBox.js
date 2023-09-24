@@ -64,7 +64,7 @@ export const VoteProposal = ({ lastId, signer }) => {
                 {shortId}
             </Typography>
             <Typography sx={{  fontFamily: 'Mooli', mb: 1.5 }} color="text.secondary">
-                The Proposal state is {handleVotingState(proposalState)}
+                The proposal state is {handleVotingState(proposalState)}
             </Typography>
 
         </CardContent>
@@ -81,7 +81,7 @@ export const VoteProposal = ({ lastId, signer }) => {
                     voteInProposal(signer, lastId, 2, voteReason);
                 }}>Abstain</Button>
             </CardActions>
-        </div> : <p>Sorry Voting is not available</p>
+        </div> : <p>Loading...</p>
         }
     </>)
 }
