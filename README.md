@@ -1,4 +1,5 @@
 #  DaoCare
+![DaoCare cover](https://github.com/ericliujt/DaoCare/assets/65979265/170bb489-843e-4c1c-81d7-9659231c43e4)
 
 # Our Vision
 Parenting is undeniably demanding, but it becomes more manageable when we connect with like-minded individuals who share our journey. Our platform is thoughtfully designed to ignite creativity, nurture caregiving, and encourage education by facilitating idea exchange and shared responsibilities among trusted friends and fellow parents.
