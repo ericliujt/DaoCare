@@ -17,7 +17,7 @@ contract GovernanceToken is ERC20Votes {
     event TokenBurned(address indexed from, uint256 amount);
 
     // max tokens per user
-    uint256 constant TOKENS_PER_USER = 1;
+    uint256 constant TOKENS_PER_USER = 10;
     uint256 constant TOTAL_SUPPLY = 1000000 * 10**18;
 
     // Mappings

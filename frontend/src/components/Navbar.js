@@ -43,6 +43,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
 
 
     const requestAndUpdateBalance = async () => {
+        console.log("IN requestAndUpdateBalance")
         await requestFunds(signer);
         await getBalance(signer["_address"])
     }
@@ -83,8 +84,8 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                 </Typography> */}
                 
                 <div className='presentation'>
-                    <Typography sx={{ fontFamily: 'Mooli', marginTop: 0, marginLeft: 13}} variant="h5" align="center" color="black" component="p" width="80%" >
-                    🐘 DAOCare stabilizes chaotic upbringing of digital nomad children. This DAO fosters a community anywhere with scheduled playdates and collective discounted lessons and field trips. Trust is accrued with good-behavior tokens that are voted upon successful meetups.                    </Typography>
+                    <Typography sx={{ fontFamily: 'Mooli', marginTop: 0, marginLeft: 13}} variant="h5" align="left" color="black" component="p" width="80%" >
+                    🐘 DAOCare stabilizes chaotic upbringing of digital nomad children. This DAO fosters a community anywhere with scheduled events ranging from playdates to collective discounted lessons to field trips. Trust is accrued with member tokens that are voted upon successful meetups.  </Typography>
                     <div className='background-img'></div>
                 </div>
                 <div className='cards'>
@@ -119,21 +120,21 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 {/* <Button variant="contained" onClick={() => {
                                     setActiveTab(0);
                                     getValue()
-                                }}>Total Assets</Button>
-                                <Button variant="contained" onClick={() => {
+                                }}>Total Assets</Button> */}
+                                <Button sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     setActiveTab(1);
 
-                                }}>Get Funds</Button> */}
+                                }}>Member Portal</Button>
                                 <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     setActiveTab(2)
-                                }}>Propose Activity</Button>
+                                }}>Activity Portal</Button>
                                 <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     setActiveTab(3)
-                                }}>Vote for Activity</Button>
+                                }}>Voting Portal</Button>
                                 <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     updateParams();
                                     setActiveTab(4)
-                                }}>Execute Votes</Button>
+                                }}>Admin Portal</Button>
 
                             </Stack>
                             <div style={{color: 'black'}}>
@@ -148,10 +149,10 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 )}
                                 {activeTab === 1 && (
                                     <div>
-                                        <h2>Get Funds to Participate on the DAO</h2>
-                                        <p>Only the owners of the ERC20 Token can Vote</p>
+                                        <h2>Get tokens to participate in voting</h2>
+                                        <p>Only authenticated members can vote</p>
 
-                                        <Button variant='contained' onClick={requestAndUpdateBalance}>Get Funds</Button>
+                                        <Button variant='contained' onClick={requestAndUpdateBalance}>Get Tokens</Button>
                                     </div>
                                 )}
                                 {activeTab === 2 && (
@@ -198,7 +199,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                 )}
                                 {activeTab === 4 && (
                                     <div>
-                                        <h2>Queue & Execute</h2>
+                                        <h2>Execute Voting Queue</h2>
                                         <p>Vote period has finished, time to execute!</p>
                                         <Box sx={{ minWidth: 275 }}>
                                             <Card variant="outlined"><ExecuteProposal signer={signer} lastId={proposal} value={propValue} description={propDesc} /></Card>
