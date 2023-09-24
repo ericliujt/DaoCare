@@ -1,4 +1,4 @@
-# Build your own DAO from Scratch, Smart Contracts, Moralis API with Backend and Complete Frontend.
+#  DaoCare
 
 ## Preparation
 
