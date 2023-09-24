@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,7 +28,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    <title>Moralis DAO</title>
+    <title>DaoCare</title>
+    <!-- Unlock Configuration -->
+    <script>
+      var unlockProtocolConfig = {
+          "network": 51, // Network ID (1 is for mainnet, 100 for xDai, etc)
+          "locks": {
+            "0x3b47ff58b4e5645dc22f9f92ff863f59e40dda55": {
+              "name": "DaoCare Parents"
+            }
+          },
+          "icon": "https://unlock-protocol.com/static/images/svg/unlock-word-mark.svg",
+          "callToAction": {
+            "default": "Please unlock this demo!"
+          }
+        }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

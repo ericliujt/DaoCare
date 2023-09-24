@@ -16,6 +16,9 @@ import { VoteProposal } from './VoteBox';
 import { ExecuteProposal } from './ExecuteBox';
 import { useGetTotalVoters } from '../web3/GetVotersCount';
 import { useGetProposals } from '../web3/GetProposalCount';
+import daocare_animation from '../img/daocare_animation.gif';
+
+// import { UnlockProtocol } from './UnlockPayWall.js'
 
 
 
@@ -69,10 +72,16 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
             <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
             <CssBaseline />
             <div className='presentation-container'>
+                <Typography sx={{ fontFamily: 'Mooli', flexGrow: 1, marginLeft: 50 }}>
+                    <img src={daocare_animation} alt="loading..." width='150' heigh='150' align="center" />
+                </Typography>
+                {/* <Typography sx={{fontFamily: 'Mooli'}} variant="h2">
+                 DAOCare
+                </Typography> */}
+                
                 <div className='presentation'>
-                    <Typography sx={{ fontFamily: 'Mooli' }} variant="h5" align="left" color="black" component="p" width="70%">
-                        Shape the future of our decentralized community. Join our DAO and have a say in our collective decision-making process. Participate in discussions, propose new ideas, and cast your vote on important issues.
-                    </Typography>
+                    <Typography sx={{ fontFamily: 'Mooli', marginTop: 0, marginLeft: 13}} variant="h5" align="center" color="black" component="p" width="80%" >
+                    🐘 DAOCare stabilizes chaotic upbringing of digital nomad children. This DAO fosters a community anywhere with scheduled playdates and collective discounted lessons and field trips. Trust is accrued with good-behavior tokens that are voted upon successful meetups.                    </Typography>
                     <div className='background-img'></div>
                 </div>
                 <div className='cards'>
@@ -81,23 +90,18 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                         <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {proposalCount} Total proposals
                         </Typography >
-                        <p className='card-text'>PARTICIPATE AND PROPOSE NOW</p>
-
                     </div>
                     <div className='card'>
                         <p>ELIGIBLE VOTERS</p>
                         <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {voters} Total Voters
                         </Typography >
-                        <p className='card-text'>JOIN THE DAO NOW AND BECOME ONE</p>
-
                     </div>
                     <div className='card'>
                         <p>YOUR VOTING POWER</p>
                         <Typography sx={{ fontFamily: 'Mooli' }} variant="h6" align="left" color="text.primary" component="p" width="70%">
                             {userBalance ? userBalance : "0"}
                         </Typography >
-                        <p className='card-text'>BASED ON YOUR TOKEN BALANCE</p>
                     </div>
                 </div>
             </div>
@@ -117,13 +121,13 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                     setActiveTab(1);
 
                                 }}>Get Funds</Button> */}
-                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#E81D1D'}} variant="contained" onClick={() => {
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     setActiveTab(2)
                                 }}>Propose Activity</Button>
-                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#FFD72D'}} variant="contained" onClick={() => {
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     setActiveTab(3)
                                 }}>Vote for Activity</Button>
-                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '16px', backgroundColor: '#2BBD6E'}} variant="contained" onClick={() => {
+                                <Button className="rounded" sx={{fontFamily: 'Mooli', borderRadius: '32px', backgroundColor: '#67ABEB'}} variant="contained" onClick={() => {
                                     updateParams();
                                     setActiveTab(4)
                                 }}>Execute Votes</Button>
@@ -132,9 +136,9 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                             <div style={{color: 'black'}}>
                                 {activeTab === 0 && (
                                     <div>
-                                        <h2>The state of the DAO</h2>
-                                        <p>The current Value of the Box is: </p>
-                                        <h2>{boxValue}</h2>
+                                        <h2>✨ Less effort, more fun ✨</h2>
+                                        {/* <p>The current Value of the Box is: </p>
+                                        <h2>{boxValue}</h2> */}
 
 
                                     </div>
@@ -171,7 +175,7 @@ export const Navbar = ({ boxValue, getValue, userBalance, getBalance, signer, re
                                             </Box>
                                         </div>
 
-                                        <Button variant='contained' onClick={() => {
+                                        <Button sx={{fontFamily: 'Mooli', borderRadius: '8px', backgroundColor: '#2BBD6E'}} variant='contained' onClick={() => {
 
                                             createProposal(signer, params.proposalDescription, params.proposalAmount)
                                             localStorage.setItem('proposalDescription', params.proposalDescription)

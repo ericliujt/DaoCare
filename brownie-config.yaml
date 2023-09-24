@@ -8,5 +8,9 @@ dotenv: .env
 networks:
   goerli:
     verify: True
+  sepolia:
+    verify: True
+  xdc-testnet:
+    verify: True
 wallets:
   from_key: ${PRIVATE_KEY}
